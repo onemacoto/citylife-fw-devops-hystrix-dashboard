@@ -1,12 +1,15 @@
 spring: 
+  profiles: 
+    active: dev-windows
   application: 
-    name: citylife-hystrix-dashboard1
+    name: hystrix-dashboard
 server:
   port: 12000
 eureka:
-  client:
+  client: 
     serviceUrl:
-      defaultZone: http://172.40.2.115:8761/eureka,http://172.40.2.116:8761/eureka
+      #defaultZone: http://172.40.2.115:8761/eureka,http://172.40.2.116:8761/eureka
+      defaultZone: http://127.0.0.1:1001/eureka
     registry-fetch-interval-seconds: 30 #拉取服务注册信息时间，默认60s
   instance:
     instanceId: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
