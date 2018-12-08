@@ -1,3 +1,4 @@
-citylife:
-  logging:
-    dir: /opt/citylife/logs
+eureka:
+  client: 
+    serviceUrl:
+      defaultZone: http://172.40.2.115:8761/eureka,http://172.40.2.116:8761/eureka
